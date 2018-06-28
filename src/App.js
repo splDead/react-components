@@ -4,6 +4,7 @@ import BasicHover from './components/HoverEffect/BasicHover';
 import Ripple from './components/Ripple/Ripple';
 import PrimaryButton from './components/buttons/PrimaryButton/PrimaryButton';
 import TextButton from './components/buttons/TextButton/TextButton';
+import TextLinkButton from './components/buttons/TextLinkButton/TextLinkButton';
 
 import './App.css';
 
@@ -30,6 +31,10 @@ class App extends Component {
                         <TextButton buttonText='Text button' onClick={() => {}} style={{color: 'black'}}/>
                     </Ripple>
                 </BasicHover>
+                <h3>
+                    Text link button
+                </h3>
+                <TextLinkButton buttonText='Link button' />
             </div>
         );
     }

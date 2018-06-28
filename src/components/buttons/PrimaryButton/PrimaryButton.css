@@ -22,8 +22,3 @@
     transition: all .2s ease-out;
     cursor: pointer;
 }
-
-/*.primary-button:active {*/
-    /*background-color: #3281b7;*/
-    /*box-shadow:inset 0 0 4px 1px rgba(0, 0, 0, .2);*/
-/*}*/
