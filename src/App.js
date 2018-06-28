@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 
 import BasicHover from './components/HoverEffect/BasicHover';
 import Ripple from './components/Ripple/Ripple';
-import PrimaryButton from './components/buttons/primary_button/PrimaryButton';
-import TextButton from './components/buttons/text_button/TextButton';
+import PrimaryButton from './components/buttons/PrimaryButton/PrimaryButton';
+import TextButton from './components/buttons/TextButton/TextButton';
 
 import './App.css';
 
