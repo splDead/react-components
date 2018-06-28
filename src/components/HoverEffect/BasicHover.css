@@ -1,6 +1,7 @@
 .basic-hover-effect-container {
     display: inline-flex;
     transition: all .2s ease-in;
+    margin: 0 10px;
 }
 
 .basic-hover-effect-container:hover {
