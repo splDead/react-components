@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import BasicHover from './components/HoverEffect/BasicHover';
+import Ripple from './components/Ripple/Ripple';
 import PrimaryButton from './components/buttons/primary_button/PrimaryButton';
 
 import './App.css';
@@ -14,9 +16,14 @@ class App extends Component {
                 <h3>
                     Primary button
                 </h3>
-                <PrimaryButton
-                    buttonText='Primary button'
-                />
+                <BasicHover>
+                    <Ripple>
+                        <PrimaryButton buttonText='Primary button' onClick={() => {
+
+                            console.log('wooh')
+                        }} />
+                    </Ripple>
+                </BasicHover>
             </div>
         );
     }
