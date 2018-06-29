@@ -8,7 +8,8 @@ class Ripple extends React.Component {
     static defaultProps = {
         during: 1000,
         color: 'rgba(255, 255, 255, .3)',
-        onClick: () => {}
+        onClick: () => {},
+        isModal: false
     };
 
     constructor(props) {
@@ -25,7 +26,7 @@ class Ripple extends React.Component {
                 pointerEvents: 'none',
                 backgroundColor: props.color,
             },
-        }
+        };
     }
 
     componentWillUnmount() {
@@ -37,16 +38,25 @@ class Ripple extends React.Component {
             ev.stopPropagation();
         }
 
-        const { during } = this.props;
+        const { during, isModal } = this.props;
         const {
             pageX,
             pageY,
+            clientX,
+            clientY,
             currentTarget: { offsetLeft, offsetTop, offsetWidth, offsetHeight },
         } = ev;
 
-        const left = pageX - offsetLeft;
-        const top = pageY - offsetTop;
-        const size = Math.max(offsetWidth, offsetHeight);
+        let left, top;
+        if (isModal) {
+            left = clientX - ev.currentTarget.offsetParent.offsetLeft;
+            top = clientY - ev.currentTarget.offsetParent.offsetTop - offsetTop;
+        } else {
+            left = pageX - offsetLeft;
+            top = pageY - offsetTop;
+        }
+
+        let size = Math.max(offsetWidth, offsetHeight);
 
         this.setState({
             rippleStyle: {
