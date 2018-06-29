@@ -14,7 +14,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    min-width: 120px;
+    min-width: 100px;
 }
 
 .primary-button:hover {
