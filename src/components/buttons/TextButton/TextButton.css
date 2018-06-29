@@ -1,4 +1,5 @@
-.text-button {
+.text-button,
+.text-button-disabled {
     background-color: transparent;
     color: #000;
     border: none;
@@ -15,6 +16,11 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.text-button-disabled {
+    cursor: initial;
+    opacity: .5;
 }
 
 .dashed-border {

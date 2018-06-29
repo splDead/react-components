@@ -23,6 +23,11 @@ class App extends Component {
                         <PrimaryButton buttonText='Primary button' onClick={() => {}} />
                     </Ripple>
                 </BasicHover>
+                <BasicHover disabled>
+                    <Ripple disabled>
+                        <PrimaryButton buttonText='Disabled button' onClick={() => {}} disabled/>
+                    </Ripple>
+                </BasicHover>
                 <h3>
                     Text button
                 </h3>
@@ -31,10 +36,16 @@ class App extends Component {
                         <TextButton buttonText='Text button' onClick={() => {}} style={{color: 'black'}}/>
                     </Ripple>
                 </BasicHover>
+                <BasicHover disabled>
+                    <Ripple color='rgba(0, 0, 0, .3)' disabled>
+                        <TextButton buttonText='Disabled button' onClick={() => {}} style={{color: 'black'}} disabled />
+                    </Ripple>
+                </BasicHover>
                 <h3>
                     Text link button
                 </h3>
                 <TextLinkButton buttonText='Link button' />
+                <TextLinkButton buttonText='Disabled button' disabled />
             </div>
         );
     }

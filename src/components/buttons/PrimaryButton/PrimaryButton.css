@@ -1,4 +1,5 @@
-.primary-button {
+.primary-button,
+.primary-button-disabled {
     background-color: #3281b7;
     color: #ffffff;
     border: none;
@@ -15,6 +16,11 @@
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 100px;
+}
+
+.primary-button-disabled {
+    opacity: .5;
+    cursor: initial;
 }
 
 .primary-button:hover {

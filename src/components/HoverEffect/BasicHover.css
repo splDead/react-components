@@ -1,4 +1,5 @@
-.basic-hover-effect-container {
+.basic-hover-effect-container,
+.basic-hover-effect-container-disabled {
     display: inline-flex;
     transition: all .2s ease-in;
     margin: 0 10px;

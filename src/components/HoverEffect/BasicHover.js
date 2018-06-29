@@ -5,8 +5,11 @@ import './BasicHover.css';
 class BasicHover extends React.Component {
 
     render() {
+
+        const { disabled } = this.props;
+
         return (
-            <div className='basic-hover-effect-container'>
+            <div className={`${disabled ? 'basic-hover-effect-container-disabled' : 'basic-hover-effect-container'}`}>
                 {this.props.children}
             </div>
         )

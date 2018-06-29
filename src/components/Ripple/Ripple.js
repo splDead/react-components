@@ -38,6 +38,10 @@ class Ripple extends React.Component {
             ev.stopPropagation();
         }
 
+        if (this.props.disabled) {
+            return;
+        }
+
         const { during, isModal } = this.props;
         const {
             pageX,
